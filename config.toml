@@ -1,0 +1,69 @@
+# Pareidolia overlay settings. Anything left out falls back to the defaults in
+# pareidolia/params.py. Per-object settings live in catalog.toml.
+
+[catalog]
+object = "fish"            # object active at startup
+shuffle_minutes = 0        # > 0: switch to a random object at this interval (key: s)
+sighting_target = 3.0      # sightings per minute that tools/calibrate.py aims for at s = 0.5
+
+[match]
+suggestibility = 0.5       # 0 = rarely sees it, 1 = sees it everywhere (keys: + and -)
+clutter_penalty = 2.0      # lambda: cost added per unit of excess edge density above rho0
+clutter_rho0 = 0.03        # excess edge density (edges beyond the outline itself, per px) with no penalty
+bin_span = 0.5             # covered points must span this share of the template's directions
+cross_penalty = 1.0        # cost added per unit of outline crossed by perpendicular edges (texture)
+cross_free = 0.08          # crossing share with no penalty (corners and junctions)
+# Suggestibility moves these together (theta, c_min, rho_max):
+threshold_low = 0.20
+threshold_high = 0.50
+coverage_low = 0.35
+coverage_high = 0.75
+clutter_low = 0.06
+clutter_high = 0.16
+
+[camera]
+device = 0
+width = 1280
+height = 720
+fps = 30
+mirror = false             # flip like a selfie camera
+lock_exposure = false      # lock auto exposure after warm-up (reduces edge shimmer)
+
+[processing]
+width = 640
+height = 360
+tau = 8                    # distance cap in px at 640x360
+tau_coarse = 4             # distance cap in px at 320x180
+delta = 2                  # px: a template point counts as covered within this distance
+min_fragment = 8           # drop edge fragments shorter than this (px)
+
+[search]
+budget_ms = 14.0           # time for the global sweep each frame
+coarse_stride = 2
+max_candidates = 20
+scale_min = 0.18           # longest side of the outline, as a share of frame height
+scale_max = 0.60
+scale_steps = 5
+rotation_step = 15
+mirror = true              # also search mirrored sketches
+size_bias = 0.12           # score penalty for the smallest size, fading to 0 at the largest
+
+[track]
+max_tracks = 3             # sightings shown at once
+confirm_frames = 3         # consecutive hits before a sighting appears
+max_misses = 10
+fade_in_s = 0.3
+fade_out_s = 0.6
+max_lifetime_s = 8.0       # a sighting dissolves after this long (0 = never)
+cooldown_s = 3.0           # no new sighting at a retired spot for this long
+
+[render]
+line_color = [255, 255, 255]   # RGB
+line_width = 2
+glow = 6.0                 # glow blur sigma in px
+glow_strength = 0.5
+ghost_opacity = 0.3        # drawn-in gaps; 0 turns them off (key: g)
+ghost_width = 1            # px
+background_dim = 0.3
+background_desaturate = 0.0
+fullscreen = false

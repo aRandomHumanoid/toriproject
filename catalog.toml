@@ -1,0 +1,125 @@
+# Objects the piece can see. Names are Quick, Draw! category names.
+# rotation: +/- degrees searched (360 = any angle).
+# threshold_offset: written by tools/calibrate.py so every object appears at a similar rate.
+
+reserves = ["ear", "shark", "duck", "flamingo", "octopus", "palm tree", "pear", "crown", "sailboat", "scissors", "skull", "hot air balloon"]
+
+[[object]]
+name = "fish"
+group = "Animal"
+rotation = 45
+threshold_offset = 0.0
+
+[[object]]
+name = "bird"
+group = "Animal"
+rotation = 30
+threshold_offset = 0.0
+
+[[object]]
+name = "butterfly"
+group = "Animal"
+rotation = 45
+threshold_offset = 0.0
+
+[[object]]
+name = "cat"
+group = "Animal"
+rotation = 15
+threshold_offset = 0.0
+
+[[object]]
+name = "elephant"
+group = "Animal"
+rotation = 15
+threshold_offset = 0.0
+
+[[object]]
+name = "rabbit"
+group = "Animal"
+rotation = 15
+threshold_offset = 0.0
+
+[[object]]
+name = "snail"
+group = "Animal"
+rotation = 15
+threshold_offset = 0.0
+
+[[object]]
+name = "swan"
+group = "Animal"
+rotation = 15
+threshold_offset = 0.0
+
+[[object]]
+name = "whale"
+group = "Animal"
+rotation = 30
+threshold_offset = 0.0
+
+[[object]]
+name = "hand"
+group = "Body"
+rotation = 90
+threshold_offset = 0.0
+
+[[object]]
+name = "guitar"
+group = "Object"
+rotation = 45
+threshold_offset = 0.0
+
+[[object]]
+name = "ice cream"
+group = "Object"
+rotation = 30
+threshold_offset = 0.0
+
+[[object]]
+name = "key"
+group = "Object"
+rotation = 360
+threshold_offset = 0.0
+
+[[object]]
+name = "light bulb"
+group = "Object"
+rotation = 30
+threshold_offset = 0.0
+
+[[object]]
+name = "teapot"
+group = "Object"
+rotation = 15
+threshold_offset = 0.0
+
+[[object]]
+name = "umbrella"
+group = "Object"
+rotation = 30
+threshold_offset = 0.0
+
+[[object]]
+name = "wine glass"
+group = "Object"
+rotation = 15
+threshold_offset = 0.0
+
+[[object]]
+name = "cactus"
+group = "Plant"
+rotation = 15
+threshold_offset = 0.0
+
+[[object]]
+name = "flower"
+group = "Plant"
+rotation = 30
+threshold_offset = 0.0
+
+[[object]]
+name = "mushroom"
+group = "Plant"
+rotation = 15
+threshold_offset = 0.0

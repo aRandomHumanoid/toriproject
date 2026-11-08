@@ -1,0 +1,11 @@
+{
+  "drawings_read": 8000,
+  "recognized_rate": 0.8445,
+  "pass_rate": 0.7439313203078745,
+  "mean_strokes": 2.8491842419419022,
+  "consistency": 5.095674514770508,
+  "bins_used": 6.025,
+  "straight_share": 0.3601476372706756,
+  "templates": 40,
+  "excluded": 0
+}

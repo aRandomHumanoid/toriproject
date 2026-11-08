@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+data/quickdraw/
+data/contact_sheets/
+templates/cache/
+clips/
